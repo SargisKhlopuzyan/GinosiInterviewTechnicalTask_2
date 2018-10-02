@@ -8,6 +8,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Log.e("LOG_TAG", "_onCreate");
         presenter = new Presenter(this, new NetworkService());
 
         findViews();
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         liveData.observe(this, new Observer<DataResponse>() {
             @Override
             public void onChanged(@Nullable DataResponse value) {
+                Log.e("LOG_TAG", "_onChanged");
                 displaySearchResults(value);
             }
         });
@@ -68,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     @Override
     protected void onResume() {
         super.onResume();
+        Log.e("LOG_TAG", "_onResume");
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -92,13 +95,13 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     @Override
     protected void onPause() {
         super.onPause();
+        Log.e("LOG_TAG", "_onPause");
         searchView.setOnQueryTextListener(null);
-        LiveData<DataResponse> liveData = DataController.getInstance().getData();
-        liveData.removeObservers(this);
     }
 
     @Override
     protected void onDestroy() {
+        Log.e("LOG_TAG", "_onDestroy");
         LiveData<DataResponse> liveData = DataController.getInstance().getData();
         liveData.removeObservers(this);
         super.onDestroy();
