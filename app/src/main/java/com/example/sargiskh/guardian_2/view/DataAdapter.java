@@ -1,4 +1,4 @@
-package com.example.sargiskh.guardian.view;
+package com.example.sargiskh.guardian_2.view;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,9 +11,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.sargiskh.guardian.R;
-import com.example.sargiskh.guardian.model.Results;
-import com.example.sargiskh.guardian.utils.Constants;
+import com.example.sargiskh.guardian_2.R;
+import com.example.sargiskh.guardian_2.model.Results;
+import com.example.sargiskh.guardian_2.utils.Constants;
 import com.squareup.picasso.Picasso;
 
 import java.text.ParseException;

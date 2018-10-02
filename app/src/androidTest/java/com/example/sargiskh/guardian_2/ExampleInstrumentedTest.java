@@ -1,4 +1,4 @@
-package com.example.sargiskh.guardian;
+package com.example.sargiskh.guardian_2;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

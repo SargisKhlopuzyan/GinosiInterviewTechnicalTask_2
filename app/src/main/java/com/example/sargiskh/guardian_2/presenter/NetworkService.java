@@ -1,11 +1,11 @@
-package com.example.sargiskh.guardian.presenter;
+package com.example.sargiskh.guardian_2.presenter;
 
 import android.support.annotation.NonNull;
 
-import com.example.sargiskh.guardian.network.APIService;
-import com.example.sargiskh.guardian.network.DataResponse;
-import com.example.sargiskh.guardian.network.RetrofitClientInstance;
-import com.example.sargiskh.guardian.utils.Constants;
+import com.example.sargiskh.guardian_2.network.APIService;
+import com.example.sargiskh.guardian_2.network.DataResponse;
+import com.example.sargiskh.guardian_2.network.RetrofitClientInstance;
+import com.example.sargiskh.guardian_2.utils.Constants;
 
 import retrofit2.Call;
 import retrofit2.Callback;

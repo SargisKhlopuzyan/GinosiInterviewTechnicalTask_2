@@ -1,9 +1,9 @@
-package com.example.sargiskh.guardian.presenter;
+package com.example.sargiskh.guardian_2.presenter;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 
-import com.example.sargiskh.guardian.network.DataResponse;
+import com.example.sargiskh.guardian_2.network.DataResponse;
 
 public class DataController {
 

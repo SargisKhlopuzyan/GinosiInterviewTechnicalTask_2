@@ -1,4 +1,4 @@
-package com.example.sargiskh.guardian.utils;
+package com.example.sargiskh.guardian_2.utils;
 
 public interface Constants {
 

@@ -1,4 +1,4 @@
-package com.example.sargiskh.guardian.network;
+package com.example.sargiskh.guardian_2.network;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

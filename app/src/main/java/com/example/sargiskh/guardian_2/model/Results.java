@@ -1,4 +1,4 @@
-package com.example.sargiskh.guardian.model;
+package com.example.sargiskh.guardian_2.model;
 
 import com.google.gson.annotations.SerializedName;
 

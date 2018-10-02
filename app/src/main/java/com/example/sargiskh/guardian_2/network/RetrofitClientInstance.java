@@ -1,4 +1,4 @@
-package com.example.sargiskh.guardian.network;
+package com.example.sargiskh.guardian_2.network;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

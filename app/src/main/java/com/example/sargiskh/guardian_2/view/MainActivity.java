@@ -1,4 +1,4 @@
-package com.example.sargiskh.guardian.view;
+package com.example.sargiskh.guardian_2.view;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.Observer;
@@ -12,11 +12,11 @@ import android.view.View;
 import android.widget.SearchView;
 import android.widget.TextView;
 
-import com.example.sargiskh.guardian.R;
-import com.example.sargiskh.guardian.network.DataResponse;
-import com.example.sargiskh.guardian.presenter.DataController;
-import com.example.sargiskh.guardian.presenter.NetworkService;
-import com.example.sargiskh.guardian.presenter.Presenter;
+import com.example.sargiskh.guardian_2.R;
+import com.example.sargiskh.guardian_2.network.DataResponse;
+import com.example.sargiskh.guardian_2.presenter.DataController;
+import com.example.sargiskh.guardian_2.presenter.NetworkService;
+import com.example.sargiskh.guardian_2.presenter.Presenter;
 
 public class MainActivity extends AppCompatActivity implements MainActivityContract, OnBottomReachedListener {
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         liveData.observe(this, new Observer<DataResponse>() {
             @Override
             public void onChanged(@Nullable DataResponse value) {
-                updateRecyclerView(value);
+                displaySearchResults(value);
             }
         });
 
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     }
 
     @Override
-    public void updateRecyclerView(DataResponse dataResponse) {
+    public void displaySearchResults(DataResponse dataResponse) {
 
         DataAdapter dataAdapter = (DataAdapter) recyclerView.getAdapter();
         dataAdapter.setResults(dataResponse.getResponse().results);
